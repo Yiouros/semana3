@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Principal — Gelo No Espeto</title>
+<link rel="icon" href="img/LogoGNP.jpg" type="image/svg+xml">
+<link rel="stylesheet" href="css/estilo.css">
+<script src="js/configuracao.js" defer>
+</script>
+<script src="js/regras.js" defer>
+</script>
+<script src="js/carrinho.js" defer>
+</script>
+<script src="js/app.js" defer>
+</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header>
+<div class="container">
+<p class="marca" id="nome-loja">Gelo no Espeto</p>
+<p>BurgerFlow · oficina de JavaScript</p>
+<nav aria-label="Navegação principal">
+<a href="index.html" aria-current="page">Principal</a>
+<a href="cardapio.html">Cardápio</a>
+<a href="carrinho.html">Carrinho <span data-contador>0</span>
+</a>
+</nav>
+</div>
+</header>
+<main class="container" id="conteudo">
+<noscript><p class="aviso">Ative o JavaScript para adicionar e revisar os lanches. Nada é enviado por este formulário.</p></noscript>
+<section class="hero colunas">
+<div>
+<p class="etapa">Sabor no seu ritmo</p>
+<h1>Seu próximo lanche começa aqui.</h1>
+<p>Bem-vindo à <strong data-nome-loja>Gelo No Espeto</strong>. Escolha seu favorito, personalize os adicionais e confira tudo antes de entrar em contato.</p>
+<div class="acoes">
+<a class="botao" href="cardapio.html">Ver cardápio</a>
+<a class="botao secundario" href="carrinho.html">Ver carrinho</a>
+</div>
+</div>
+<img class="produto destaque" src="img/GeloGrelhadojpg.jpg" width="640" height="420" alt="Ilustração de hambúrguer com queijo, bacon e pão dourado">
+</section>
+<section class="cartao">
+<h2>Três passos, sem pressa</h2>
+<ol>
+<li>Explore o cardápio e adicione os seus favoritos.</li>
+<li>Confira quantidades, entrega e pagamento no carrinho.</li>
+<li>Revise uma prévia. O contato por WhatsApp é opcional.</li>
+</ol>
+</section>
+<p class="aviso">Demonstração didática: use dados fictícios. Não há servidor, banco de dados ou pagamento online.</p>
+<p id="status-armazenamento" role="status">
+</p>
+<noscript>
+<p>Ative o JavaScript para montar seu carrinho.</p>
+</noscript>
+</main>
+<footer class="container">Projeto de estudo. Nenhuma compra ou cobrança é realizada. A loja precisa confirmar disponibilidade, preços e entrega.</footer>
+</body>
+</html>

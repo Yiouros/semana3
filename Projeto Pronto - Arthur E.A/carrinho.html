@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrinho — BurgerFlow</title>
+<link rel="icon" href="img/burger-bacon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/estilo.css">
+<script src="js/configuracao.js" defer>
+</script>
+<script src="js/regras.js" defer>
+</script>
+<script src="js/carrinho.js" defer>
+</script>
+<script src="js/app.js" defer>
+</script>
+<script src="js/carrinho-pagina.js" defer>
+</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header>
+<div class="container">
+<p class="marca" id="nome-loja">Fogo de Palha</p>
+<p>BurgerFlow · oficina de JavaScript</p>
+<nav aria-label="Navegação principal">
+<a href="index.html">Principal</a>
+<a href="cardapio.html">Cardápio</a>
+<a href="carrinho.html" aria-current="page">Carrinho <span data-contador>0</span>
+</a>
+</nav>
+</div>
+</header>
+<main class="container" id="conteudo">
+<noscript><p class="aviso">Ative o JavaScript para adicionar e revisar os lanches. Nada é enviado por este formulário.</p></noscript>
+<h1>Confira seu carrinho</h1>
+<p class="aviso">Use um nome fictício. Revisar não compra nem envia nada.</p>
+<p id="status-armazenamento" role="status" tabindex="-1">
+</p>        <form id="formulario" novalidate>
+            <div class="colunas">
+<section class="cartao">
+<h2>Seus lanches</h2>
+<div id="itens-carrinho">
+</div>
+<p id="carrinho-vazio">Seu carrinho está vazio. <a href="cardapio.html">Voltar ao cardápio</a>
+</p>
+<button id="esvaziar" type="button" class="secundario">Esvaziar carrinho</button>
+<p>
+<a href="cardapio.html">Adicionar mais lanches</a>
+</p>
+</section>                <section class="cartao" aria-labelledby="titulo-dados">
+                    <p class="etapa">2. Complete a simulação</p>
+                    <h2 id="titulo-dados">Entrega e pagamento</h2>
+                    <label for="nome">Nome fictício</label>
+                    <input id="nome" name="nome" type="text" minlength="3" maxlength="60" autocomplete="off" placeholder="Exemplo: Ana de Teste" required>
+                    <label for="bairro">Bairro ou retirada</label>
+                    <select id="bairro" name="bairro" required>
+                        <option value="">Escolha uma opção</option>
+                        <option value="centro">Centro — taxa de R$ 5,00</option>
+                        <option value="sao-judas">São Judas — taxa de R$ 7,00</option>
+                        <option value="retirada">Retirada — sem taxa</option>
+                    </select>
+                    <label for="pagamento">Forma de pagamento</label>
+                    <select id="pagamento" name="pagamento" required>
+                        <option value="">Escolha uma opção</option>
+                        <option value="pix">Pix</option>
+                        <option value="cartao">Cartão</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+                    <div id="campo-troco" hidden>
+                        <label for="troco">Vai pagar com quanto? (opcional)</label>
+                        <input id="troco" name="troco" type="number" min="0" step="0.01" inputmode="decimal" disabled aria-describedby="ajuda-troco">
+                        <small id="ajuda-troco">Exemplo: 100. Deixe vazio se não precisar de troco. Não informe dados de cartão.</small>
+                    </div>
+                    <section class="resumo" aria-label="Valores previstos" aria-live="polite" aria-atomic="true">
+                        <h3>Resumo imediato</h3>
+                        <dl>
+                            <div>
+<dt>Produtos + adicionais</dt>
+<dd id="subtotal">—</dd>
+</div>
+                            <div>
+<dt>Taxa de entrega</dt>
+<dd id="taxa">Escolha o bairro</dd>
+</div>
+                            <div class="total">
+<dt>Total previsto</dt>
+<dd id="total">—</dd>
+</div>
+                        </dl>
+                    </section>
+                    <p id="erro" class="erro" role="alert" tabindex="-1">
+</p>
+                    <button id="revisar" type="submit" disabled>3. Revisar pedido</button>
+                </section>
+            </div>
+        </form>
+        <section class="cartao revisao" aria-labelledby="titulo-revisao">
+            <h2 id="titulo-revisao">3. Confira a mensagem</h2>
+            <p>Revise os dados antes de qualquer contato. Isto ainda não é um pedido confirmado.</p>
+            <pre id="mensagem" tabindex="0" aria-live="polite">Preencha o formulário e pressione “Revisar pedido”.</pre>
+            <button id="whatsapp" type="button" disabled aria-describedby="aviso-whatsapp">Abrir WhatsApp (opcional)</button>
+            <p id="aviso-whatsapp">Destino autorizado já configurado. Revise primeiro. Abrir WhatsApp não envia automaticamente.</p>
+        </section>
+</main>
+<footer class="container">Projeto de estudo. Nenhuma compra ou cobrança é realizada. A loja precisa confirmar disponibilidade, preços e entrega.</footer>
+</body>
+</html>

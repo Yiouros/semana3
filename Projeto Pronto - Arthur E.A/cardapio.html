@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardápio — BurgerFlow</title>
+<link rel="icon" href="img/LogoGNP.jpg" type="image/svg+xml">
+<link rel="stylesheet" href="css/estilo.css">
+<script src="js/configuracao.js" defer>
+</script>
+<script src="js/regras.js" defer>
+</script>
+<script src="js/carrinho.js" defer>
+</script>
+<script src="js/app.js" defer>
+</script>
+<script src="js/cardapio.js" defer>
+</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header>
+<div class="container">
+<p class="marca" id="nome-loja">Gelo No espeto</p>
+<p>BurgerFlow · oficina de JavaScript</p>
+<nav aria-label="Navegação principal">
+<a href="index.html">Principal</a>
+<a href="cardapio.html" aria-current="page">Cardápio</a>
+<a href="carrinho.html">Carrinho <span data-contador>0</span>
+</a>
+</nav>
+</div>
+</header>
+<main class="container" id="conteudo">
+<noscript><p class="aviso">Ative o JavaScript para adicionar e revisar os lanches. Nada é enviado por este formulário.</p></noscript>
+<p class="etapa">Escolha e personalize</p>
+<h1>Nosso cardápio</h1>
+<p>Os adicionais são cobrados em cada unidade. Quantidade de 1 a 10 por combinação.</p>
+<p id="status-armazenamento" role="status">
+</p>
+<div class="catalogo" id="catalogo">
+</div>
+<p id="feedback" role="status" tabindex="-1"></p>
+<a class="botao" href="carrinho.html">Ir para o carrinho</a>
+</main>
+<footer class="container">Projeto de estudo. Nenhuma compra ou cobrança é realizada. A loja precisa confirmar disponibilidade, preços e entrega.</footer>
+</body>
+</html>
